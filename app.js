@@ -1,9 +1,31 @@
-const button1 = document.querySelector('.button1')
-const button2 = document.querySelector('.button2')
+const flashCards = [
+	{
+		question: 'q0',
+		answer: 'a0'
+	},
+	{
+		question: 'q1',
+		answer: 'a1'
+	},
+	{
+        question: 'q2',
+        answer: 'a2'
+	},
+	{
+		question: 'q3',
+		answer: 'a3'
+	},
+	{
+		question: 'q4',
+		answer: 'a4'
+	},
+];
 
-function clickButton(event) {
-    alert("Click 'OK' to download viruses. Dummy.")
-}    
+const prompt = document.querySelector('.prompt');
 
-button1.addEventListener('click', clickButton)
-button2.addEventListener('click', clickButton);
+document.body.onkeyup = function (event) {
+	if (event.key === ' ') {
+        let cardID = Math.floor(Math.random() * flashCards.length);
+      prompt.innerHTML = flashCards[cardID].question;
+	}
+};
