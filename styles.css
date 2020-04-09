@@ -1,0 +1,25 @@
+header {
+    text-align: center;
+    color: pink;
+    background-color: black;
+}
+
+main {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    border: 3px solid black;
+    height: 600px;
+    background-color: red;
+}
+
+button {
+    padding: 7px;
+    font-size: 1em;    
+}
+
+footer {
+    border: 3px solid black;
+    text-align: center;
+    height: 200px
+}
