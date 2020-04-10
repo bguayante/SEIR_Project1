@@ -1,33 +1,82 @@
-body{
-    background-image: url('imgs/Background.jpg');
-    text-align: center;
-}
-
 header {
-    text-align: center;
-    color: white;
+	text-align: center;
+	color: white;
 }
 
+h1 {
+    font-size: 4rem;
+    font-family: 'Sanchez', serif;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: 'Sanchez', serif;
+}
+
+body {
+	background-image: url('imgs/Background.jpg');
+    text-align: center;
+    height: 900px
+}
+
+.prompt {
+	font-size: 2rem;
+	font-weight: bolder;
+	color: orange;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
 
 .mainContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);   
-    height: 500px;
-    width: 700px;
-    background-color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	height: 400px;
+	width: 700px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 400px;
+	width: 700px;
+	background-color: rgba(255, 255, 255, 0.788);
+	border: 5px solid rgba(102, 101, 101, 0.425);
+}
+
+.buttons {
+    bottom: 200px;
+	padding: 10px;
+    width: 100px;
+    display: inline-block;
+}
+
+.button {
+    display:  flex;
+    float: left;
+}
+
+.support {
+    color: white;
+    font-size: 18px;
+}
+
+a {
+    color: white;
+    text-emphasis: bold;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+footer {
     text-align: center;
-    height: 500px;
-    width: 700px;
-    background-color: white;
-    border: 5px solid rgba(102, 101, 101, 0.425);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
