@@ -1,45 +1,84 @@
-//Flashcard Deck
+//Flashcard Deck//
 let flashCards = [
 	{
-		question: 'q0',
-		answer: 'a0',
+		question: 'What is Doc Angle a doctor in?',
+		answer: 'Mystical Science',
 	},
 	{
-		question: 'q1',
-		answer: 'a1',
+		question: 'How many years in jail has Joe Exotic been sentenced to?',
+		answer: '22',
 	},
 	{
-		question: 'q2',
-		answer: 'a2',
+		question: "What is the name of Carole Baskin's dead husband?",
+		answer: 'Don Lewis',
 	},
 	{
-		question: 'q3',
-		answer: 'a3',
+		question: 'In what state is the GW Zoo located?',
+		answer: 'Oklahoma',
 	},
 	{
-		question: 'q4',
-		answer: 'a4',
+		question: 'In what kind of accident did John Reinke lose his legs?',
+		answer: 'Ziplining accident',
+	},
+	{
+		question: 'In which party\'s gubernatorial primary did Joe Exotic run in 2018?',
+		answer: 'Libertarian Party',
+	},
+	{
+		question: 'After fleeing his zoo, in which country did Joe Exotic pretend to be?',
+		answer: 'Belize',
+	},
+	{
+		question: 'How much did Joe Exotic give Allen Glover to kill Carole Baskin?',
+		answer: '$3,000',
 	},
 ];
 
+//Set variables to be used for event listeners later
 const prompt = document.querySelector('.prompt');
 const rightButton = document.querySelector('.right');
 const promptClick = document.querySelector('.card');
 
-let index = 0;
+//Track which object is displayed and manipulated at give time
+let index = 0
 
-//On spacebar//
 document.body.onkeyup = function (event) {
 	if (event.key === ' ') {
-		if (index > flashCards.length - 1) {
-			index = 0;
+		if (index > flashCards.length - 2) {
+			index = -1;
 		}
-		prompt.innerHTML = flashCards[index].question;
 		index += 1;
+		prompt.innerHTML = flashCards[index].question;
 	}
 	console.log('index', index);
+	console.log('flashcards length:',flashCards.length)
 };
-//}
+
+function showAnswer() {
+	if (index > flashCards.length - 1) {
+		index = 0;
+	}
+	prompt.innerHTML = flashCards[index].question
+		? (prompt.innerHTML = flashCards[index].answer)
+		: (prompt.innerHTML = flashCards[index].answer);
+		console.log('index:', index);
+		console.log('flashcards length:', flashCards.length);
+}
+
+function rightClickHandler() {
+	prompt.innerHTML = 'Nice job!'
+	flashCards.splice(index, 1);
+}
+
+//*THIS BREAKS EVERYTHING!!!*///
+// if (flashCards.length = 0){
+// 	prompt.innerHTML = 'Congratulations, you win! \n Stay safe, friend.'
+// }
+
+promptClick.addEventListener('click', showAnswer);
+rightButton.addEventListener('click', rightClickHandler);
+
+
 
 // let cardID = Math.floor(Math.random() * flashCards.length);
 // function rightClickHandler() {
