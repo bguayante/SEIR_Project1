@@ -4,26 +4,26 @@ header {
 }
 
 h1 {
-    font-size: 4rem;
-    font-family: 'Sanchez', serif;
+	font-size: 4rem;
+	font-family: 'Sanchez', serif;
 }
 
-h3 {
-    font-size: 2rem;
-    font-family: 'Sanchez', serif;
+.instructions {
+	font-size: 1.5rem;
+	font-family: 'Sanchez', serif;
 }
 
 body {
 	background-image: url('imgs/Background.jpg');
-    text-align: center;
-    height: 900px
+	text-align: center;
+	height: 900px;
 }
 
 .prompt {
 	font-size: 2rem;
 	font-weight: bolder;
 	color: orange;
-	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-width: 0.75px;
 	-webkit-text-stroke-color: black;
 }
 
@@ -51,35 +51,41 @@ body {
 }
 
 .buttons {
-    bottom: 200px;
-	padding: 20px;
-    width: 100px;
-    display: inline-block;
+	text-align: center;
+	padding: 150px;
+	width: 100px;
+	display: inline-block;
 }
 
 .button {
-    display:  flex;
-	float: left;
-	padding: 10px 20px;
-	font-size: 16;
+	text-align: center;
+	float: center;
+	padding: 10px 10px;
+	font-size: 20px;
+	width: 150px;
+	color: white;
+	background-color: rgb(235, 139, 44);
+	cursor: pointer;
+	border: 2px solid black;
 }
 
 .support {
-    color: white;
-    font-size: 18px;
+	color: white;
+	font-size: 18px;
 }
 
 a {
-    color: white;
-    text-emphasis: bold;
-    font-size: 18px;
-    font-weight: bolder;
+	color: white;
+	text-emphasis: bold;
+	font-size: 18px;
+	font-weight: bolder;
+	text-decoration: none;
 }
 
 footer {
-    text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }

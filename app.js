@@ -39,7 +39,7 @@ const prompt = document.querySelector('.prompt');
 const rightButton = document.querySelector('.right');
 const promptClick = document.querySelector('.card');
 
-//Track which object is displayed and manipulated at give time
+//Track which object is displayed and manipulated at a given time
 let index = 0
 
 document.body.onkeyup = function (event) {
@@ -47,20 +47,20 @@ document.body.onkeyup = function (event) {
 		if (index > flashCards.length - 2) {
 			index = -1;
 		}
-		index += 1;
-		prompt.innerHTML = flashCards[index].question;
+		prompt.innerHTML = flashCards[index].answer;
 	}
 	console.log('index', index);
 	console.log('flashcards length:',flashCards.length)
 };
 
-function showAnswer() {
+function showQuestion() {
 	if (index > flashCards.length - 1) {
-		index = 0;
+		index = -1;
 	}
-	prompt.innerHTML = flashCards[index].question
-		? (prompt.innerHTML = flashCards[index].answer)
-		: (prompt.innerHTML = flashCards[index].answer);
+	index += 1;
+	prompt.innerHTML = flashCards[index].answer
+		? (prompt.innerHTML = flashCards[index].question)
+		: (prompt.innerHTML = flashCards[index].question);
 		console.log('index:', index);
 		console.log('flashcards length:', flashCards.length);
 }
@@ -72,10 +72,10 @@ function rightClickHandler() {
 
 //*THIS BREAKS EVERYTHING!!!*///
 // if (flashCards.length = 0){
-// 	prompt.innerHTML = 'Congratulations, you win! \n Stay safe, friend.'
+// 	prompt.innerHTML = 'Congratulations, you win! Stay safe, friend.'
 // }
 
-promptClick.addEventListener('click', showAnswer);
+promptClick.addEventListener('click', showQuestion);
 rightButton.addEventListener('click', rightClickHandler);
 
 
