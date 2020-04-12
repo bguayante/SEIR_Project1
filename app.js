@@ -39,23 +39,29 @@ const prompt = document.querySelector('.prompt');
 const rightButton = document.querySelector('.right');
 const promptClick = document.querySelector('.card');
 
+//Congratulations message on game over
+const congrats = 'Congratulations, you win! \n Stay safe, friend.';
+
 //Track which object is displayed and manipulated at a given time
 let index = 0
 
+
+//Show answer on spacebar press
 document.body.onkeyup = function (event) {
 	if (event.key === ' ') {
-		if (index > flashCards.length - 2) {
-			index = -1;
-		}
 		prompt.innerHTML = flashCards[index].answer;
 	}
 	console.log('index', index);
 	console.log('flashcards length:',flashCards.length)
 };
 
+//Show question on div click
 function showQuestion() {
-	if (index > flashCards.length - 1) {
-		index = -1;
+	if (flashCards.length <= 1) {
+		prompt.innerHTML = congrats;
+	}
+	if (index > flashCards.length - 2) {
+		index = 0;
 	}
 	index += 1;
 	prompt.innerHTML = flashCards[index].answer
@@ -69,11 +75,6 @@ function rightClickHandler() {
 	prompt.innerHTML = 'Nice job!'
 	flashCards.splice(index, 1);
 }
-
-//*THIS BREAKS EVERYTHING!!!*///
-// if (flashCards.length = 0){
-// 	prompt.innerHTML = 'Congratulations, you win! Stay safe, friend.'
-// }
 
 promptClick.addEventListener('click', showQuestion);
 rightButton.addEventListener('click', rightClickHandler);
