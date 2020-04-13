@@ -47,7 +47,7 @@ body {
 	text-align: center;
 	height: 400px;
 	width: 700px;
-	background-color: rgba(255, 255, 255, 0.788);
+	background-color: rgba(255, 255, 255, 0.877);
 	border: 5px solid rgba(102, 101, 101, 0.425);
 	cursor: pointer;
 }
@@ -55,7 +55,7 @@ body {
 .buttons {
 	text-align: center;
 	padding: 150px;
-	width: 100px;
+	width: 150px;
 	display: inline-block;
 }
 
