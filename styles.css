@@ -6,11 +6,13 @@ header {
 h1 {
 	font-size: 4rem;
 	font-family: 'Sanchez', serif;
+	background-color: rgba(0, 0, 0, 0.507);
 }
 
 .instructions {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-family: 'Sanchez', serif;
+	background-color: rgba(0, 0, 0, 0.486);
 }
 
 body {
@@ -72,6 +74,7 @@ body {
 .support {
 	color: white;
 	font-size: 18px;
+	font-family: 'Sanchez', serif;
 }
 
 a {
