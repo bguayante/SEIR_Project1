@@ -60,9 +60,7 @@ let index = 0;
 /////////////////////////////////
 
 document.body.onkeyup = function (event) {
-	if (index == -1) {
-		index = 0;
-	} else if (
+	if (
 		event.key === ' ' &&
 		prompt.innerHTML != congrats &&
 		prompt.innerHTML != 'Nice job!'
