@@ -5,35 +5,41 @@
 let flashCards = [
 	{
 		question: 'What is Doc Antle a doctor in?',
-		answer: '',
+		answer: 'Mystical Science',
 	},
 	{
-		question: 'Q2',
-		answer: 'A2',
+		question: 'Who does Joe Exotic hate more than anyone in the world?',
+		answer: 'Carol Baskin',
 	},
 	{
-		question: 'Q3',
-		answer: 'A3',
+		question: "What's the name of Carol Baskin's dead husband?",
+		answer: 'Don Lewis',
 	},
 	{
-		question: 'Q4',
-		answer: 'A4',
+		question: 'Did Carol Baskin kill her husband?',
+		answer: 'Almost certainly',
 	},
 	{
-		question: 'Q5',
-		answer: 'A5',
+		question:
+			'How long did it take Kelci Safferty to return to work after having her arm bitten off by a tiger?',
+		answer: 'One week.',
 	},
 	{
-		question: 'Q6',
-		answer: 'A6',
+		question: 'In what year did Joe Exotic run for governor of Oklahoma?',
+		answer: '2016',
 	},
 	{
-		question: 'Q7',
-		answer: 'A7',
+		question:
+			'How much did Joe Exotic pay Allen Glover to attempt to kill Carol Baskin?',
+		answer: '$3,000',
 	},
 	{
-		question: 'Q8',
-		answer: 'A8',
+		question: 'To how many years has Joe Exotic been sentenced to jail?',
+		answer: '22 years',
+	},
+	{
+		question: 'How many spouses does Doc Antle have?',
+		answer: 'Nine (allegedly)',
 	},
 ];
 
@@ -57,7 +63,9 @@ document.body.onkeyup = function (event) {
 		index = 0;
 	} else if (event.key === ' ' && prompt.innerHTML != congrats) {
 		prompt.innerHTML = flashCards[index - 1].answer;
-	} else if ((prompt.innerHTML = congrats)) {
+	} else if (prompt.innerHTML == 'Nice job!') {
+		return;
+	} else if (prompt.innerHTML == congrats) {
 		return;
 	}
 };
@@ -73,10 +81,6 @@ function showQuestion() {
 		//Reset index counter to 0 when end of array is reached
 	} else if (index == flashCards.length - 1) {
 		index = 0;
-		prompt.innerHTML = flashCards[0].question;
-		index += 1;
-	} else if (index == 0) {
-		//Needed to display question at index 0
 		prompt.innerHTML = flashCards[0].question;
 		index += 1;
 	} else {

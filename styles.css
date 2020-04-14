@@ -61,7 +61,6 @@ body {
 
 .button {
 	text-align: center;
-	float: center;
 	padding: 10px 10px;
 	font-size: 20px;
 	width: 150px;
@@ -79,7 +78,6 @@ body {
 
 a {
 	color: white;
-	text-emphasis: bold;
 	font-size: 18px;
 	font-weight: bolder;
 	text-decoration: none;
