@@ -56,20 +56,6 @@ const congrats = "Congratulations, you win! \n You're a real Tiger King!";
 let index = 0;
 
 /////////////////////////////////
-//Show answer on spacebar press//
-/////////////////////////////////
-
-document.body.onkeyup = function (event) {
-	if (
-		event.key === ' ' &&
-		prompt.innerHTML != congrats &&
-		prompt.innerHTML != 'Nice job!'
-	) {
-		prompt.innerHTML = flashCards[index - 1].answer;
-	}
-};
-
-/////////////////////////////////
 //Show question on prompt click//
 /////////////////////////////////
 
@@ -87,6 +73,20 @@ function showQuestion() {
 		index += 1;
 	}
 }
+
+/////////////////////////////////
+//Show answer on spacebar press//
+/////////////////////////////////
+
+document.body.onkeyup = function (event) {
+	if (
+		event.key === ' ' &&
+		prompt.innerHTML != congrats &&
+		prompt.innerHTML != 'Nice job!'
+	) {
+		prompt.innerHTML = flashCards[index - 1].answer;
+	}
+};
 
 //////////////////////////////////////////////////
 //Splice at index if 'Correct' button is pressed//
