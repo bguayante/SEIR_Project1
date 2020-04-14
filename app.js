@@ -43,15 +43,16 @@ let flashCards = [
 	},
 ];
 
-//Set variables to be used for event listeners
+/////////////
+//Variables//
+/////////////
+
 const prompt = document.querySelector('.prompt');
 const rightButton = document.querySelector('.right');
 const promptClick = document.querySelector('.card');
 
-//Congratulations message on game over
 const congrats = "Congratulations, you win! \n You're a real Tiger King!";
 
-//Track which object is displayed and manipulated at a given time
 let index = 0;
 
 /////////////////////////////////
@@ -61,12 +62,12 @@ let index = 0;
 document.body.onkeyup = function (event) {
 	if (index == -1) {
 		index = 0;
-	} else if (event.key === ' ' && prompt.innerHTML != congrats) {
+	} else if (
+		event.key === ' ' &&
+		prompt.innerHTML != congrats &&
+		prompt.innerHTML != 'Nice job!'
+	) {
 		prompt.innerHTML = flashCards[index - 1].answer;
-	} else if (prompt.innerHTML == 'Nice job!') {
-		return;
-	} else if (prompt.innerHTML == congrats) {
-		return;
 	}
 };
 
@@ -75,16 +76,13 @@ document.body.onkeyup = function (event) {
 /////////////////////////////////
 
 function showQuestion() {
-	//Show congrats if array is empty
 	if (flashCards.length <= 1) {
 		prompt.innerHTML = congrats;
-		//Reset index counter to 0 when end of array is reached
 	} else if (index == flashCards.length - 1) {
 		index = 0;
 		prompt.innerHTML = flashCards[0].question;
 		index += 1;
 	} else {
-		//Increment index by 1 and replace prompt div text with question
 		prompt.innerHTML = flashCards[index].answer
 			? (prompt.innerHTML = flashCards[index].question)
 			: (prompt.innerHTML = flashCards[index].question);
@@ -92,9 +90,9 @@ function showQuestion() {
 	}
 }
 
-//////////////////
-//Correct Button//
-//////////////////
+//////////////////////////////////////////////////
+//Splice at index if 'Correct' button is pressed//
+//////////////////////////////////////////////////
 
 function rightClickHandler() {
 	if (flashCards.length == 1) {
@@ -110,6 +108,9 @@ function rightClickHandler() {
 	}
 }
 
-//Set event listeners
+///////////////////
+//Event listeners//
+///////////////////
+
 promptClick.addEventListener('click', showQuestion);
 rightButton.addEventListener('click', rightClickHandler);

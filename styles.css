@@ -6,19 +6,26 @@ header {
 h1 {
 	font-size: 4rem;
 	font-family: 'Sanchez', serif;
-	background-color: rgba(0, 0, 0, 0.507);
+	background-color: rgb(235, 139, 44);
+	border: 2px solid black;
+	-webkit-text-stroke-width: 0.25px;
+	-webkit-text-stroke-color: black;
 }
 
 .instructions {
 	font-size: 1.25rem;
 	font-family: 'Sanchez', serif;
 	background-color: rgba(0, 0, 0, 0.486);
+	border: 2px white;
+	padding: 10px;
 }
 
 body {
 	background-image: url('imgs/Background.jpg');
 	text-align: center;
 	height: 900px;
+	max-width: 960px;
+	margin: auto;
 }
 
 .prompt {
@@ -43,8 +50,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	text-align: center;
 	height: 400px;
 	width: 700px;
 	background-color: rgba(255, 255, 255, 0.877);
