@@ -4,7 +4,7 @@ header {
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 3.5rem;
 	font-family: 'Sanchez', serif;
 	background-color: rgb(235, 139, 44);
 	border: 2px solid black;
@@ -13,7 +13,7 @@ h1 {
 }
 
 .instructions {
-	font-size: 1.25rem;
+	font-size: 1rem;
 	font-family: 'Sanchez', serif;
 	background-color: rgba(0, 0, 0, 0.486);
 	border: 2px white;
@@ -59,7 +59,7 @@ body {
 
 .buttons {
 	text-align: center;
-	padding: 150px;
+	padding: 100px;
 	width: 150px;
 	display: inline-block;
 }
@@ -83,7 +83,7 @@ body {
 
 a {
 	color: white;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bolder;
 	text-decoration: none;
 }
