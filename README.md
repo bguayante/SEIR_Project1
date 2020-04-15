@@ -2,7 +2,7 @@
 
 ### DESCRIPTION
 
-TIger King is a short memory game in which the player is given the opportunity to view prompts and answers stored on each card in a deck. When ready, the player may begin the game in ernest, alternating between questions and answers and marking which are correct as they go. When marked correct, a card is removed from the deck. The game ends when the player has marked all cards correct and the deck is empty.
+Tiger King is a short memory game in which the player is given the opportunity to view prompts and answers stored on each card in a deck. When ready, the player may begin the game in ernest, alternating between questions and answers and marking which are correct as they go. When marked correct, a card is removed from the deck. The game ends when the player has marked all cards correct and the deck is empty.
 
 ---
 
