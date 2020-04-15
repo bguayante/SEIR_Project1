@@ -21,7 +21,7 @@ let flashCards = [
 	},
 	{
 		question:
-			'How long did it take Kelci Safferty to return to work after having her arm bitten off by a tiger?',
+			'How long did it take Kelci Safferty to return to work after having his arm bitten off by a tiger?',
 		answer: 'One week.',
 	},
 	{
@@ -62,7 +62,7 @@ let index = 0;
 function showQuestion() {
 	if (flashCards.length <= 1) {
 		prompt.innerHTML = congrats;
-	} else if (index == flashCards.length - 1) {
+	} else if (index === flashCards.length - 1) {
 		index = 0;
 		prompt.innerHTML = flashCards[0].question;
 		index += 1;
@@ -93,12 +93,13 @@ document.body.onkeyup = function (event) {
 //////////////////////////////////////////////////
 
 function rightClickHandler() {
-	if (flashCards.length == 1) {
+	if (flashCards.length === 1) {
 		prompt.innerHTML = congrats;
 		if (flashCards.length) {
 			flashCards.splice(index, 1);
 		}
-	} else if (index == flashCards.length - 1) {
+		// index = 0
+	} else if (index === flashCards.length - 1) {
 		index = 0;
 	} else {
 		prompt.innerHTML = 'Nice job!';
