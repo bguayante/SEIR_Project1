@@ -36,6 +36,12 @@ body {
 	-webkit-text-stroke-color: black;
 }
 
+.controls {
+	font-family: 'Sanchez', serif;
+	font-size: 1.25rem;
+	color: rgba(0, 0, 0, 0.616)
+}
+
 .mainContainer {
 	position: absolute;
 	top: 50%;
