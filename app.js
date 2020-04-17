@@ -108,6 +108,7 @@ function rightClickHandler() {
 		index = 0;
 	} else {
 		prompt.innerHTML = 'Nice job! Click the card to continue!';
+		controls.innerHTML = '';
 		flashCards.splice(index - 1, 1);
 	}
 }
