@@ -53,7 +53,7 @@ const wrongButton = document.querySelector('.wrong');
 const promptClick = document.querySelector('.card');
 const controls = document.querySelector('.controls');
 
-const congrats = "Congratulations, you win! \n You're a real Tiger King!";
+const congrats = "Congratulations, you win! You're a real Tiger King! Click the card to reload";
 
 let index = 0;
 
@@ -62,7 +62,9 @@ let index = 0;
 /////////////////////////////////
 
 function showQuestion() {
-	if (flashCards.length <= 1) {
+	if (prompt.innerHTML === congrats) {
+		location.reload()
+	} else if (flashCards.length <= 1) {
 		prompt.innerHTML = congrats;
 	} else if (index === flashCards.length - 1) {
 		index = 0;
