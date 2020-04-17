@@ -49,7 +49,9 @@ let flashCards = [
 
 const prompt = document.querySelector('.prompt');
 const rightButton = document.querySelector('.right');
+const wrongButton = document.querySelector('.wrong');
 const promptClick = document.querySelector('.card');
+const controls = document.querySelector('.controls');
 
 const congrats = "Congratulations, you win! \n You're a real Tiger King!";
 
@@ -65,11 +67,13 @@ function showQuestion() {
 	} else if (index === flashCards.length - 1) {
 		index = 0;
 		prompt.innerHTML = flashCards[0].question;
+		controls.innerHTML = 'Press spacebar to see the answer!';
 		index += 1;
 	} else {
 		prompt.innerHTML = flashCards[index].answer
 			? (prompt.innerHTML = flashCards[index].question)
 			: (prompt.innerHTML = flashCards[index].question);
+		controls.innerHTML = 'Press spacebar to see the answer!';
 		index += 1;
 	}
 }
@@ -82,9 +86,10 @@ document.body.onkeyup = function (event) {
 	if (
 		event.key === ' ' &&
 		prompt.innerHTML != congrats &&
-		prompt.innerHTML != 'Nice job!'
+		prompt.innerHTML != 'Nice job! Click the card to continue!'
 	) {
 		prompt.innerHTML = flashCards[index - 1].answer;
+		controls.innerHTML = '';
 	}
 };
 
@@ -102,10 +107,14 @@ function rightClickHandler() {
 	} else if (index === flashCards.length - 1) {
 		index = 0;
 	} else {
-		prompt.innerHTML = 'Nice job!';
+		prompt.innerHTML = 'Nice job! Click the card to continue!';
 		flashCards.splice(index - 1, 1);
 	}
 }
+
+//////////////////
+//Reset on click//
+//////////////////
 
 ///////////////////
 //Event listeners//
@@ -113,3 +122,4 @@ function rightClickHandler() {
 
 promptClick.addEventListener('click', showQuestion);
 rightButton.addEventListener('click', rightClickHandler);
+wrongButton.addEventListener('click', showQuestion);
